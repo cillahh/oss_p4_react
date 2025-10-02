@@ -15,7 +15,7 @@ const UpdateProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios.put(
-      `https://66a2170f967c89168f1eb98b.mockapi.io/products/${updatedProduct.id}`,
+      `https://68db334423ebc87faa323cbc.mockapi.io/products/${updatedProduct.id}`,
       updatedProduct
     );
     navigate(-1);
