@@ -32,6 +32,15 @@ const ProductCard = ({ product, putProduct, deleteProduct }) => {
       />
       <div className={styles.productInfo}>
         <h3>{name}</h3>
+        <div className={styles.colorOptions}>
+          {product.colorList?.map((color, index) => (
+            <div
+              key={index}
+              className={styles.colorBox}
+              style={{ backgroundColor: `#${color}` }}
+            />
+          ))}
+        </div>
         <p className={styles.price}>{price}</p>
         <div className={styles.amountContainer}>
           <button onClick={handleMinus}>-</button>
@@ -41,7 +50,7 @@ const ProductCard = ({ product, putProduct, deleteProduct }) => {
         <button className={styles.remove} onClick={() => deleteProduct(id)}>
           REMOVE
         </button>
-        <p className={styles.total}>Product Total: {amount * price} </p>
+        {/* <p className={styles.total}>Product Total: {amount * price} </p> */}
       </div>
     </div>
   );

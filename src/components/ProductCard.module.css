@@ -1,21 +1,24 @@
 .cardContainer {
-  background-color: rgba(255, 255, 255, 0.896);
+  background-color: #333;
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1rem;
-  width: 30rem;
+  width: 100%;
+  max-width: 30rem;
   height: 15rem;
 
   display: grid;
   grid-template-columns: 40% 60%;
-  color: #333;
+  color: rgba(255, 255, 255, 0.896);
   transition: all 0.3s ease;
 }
 
 .cardContainer img {
   height: 100%;
   width: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
+  display: block;
 }
 
 .productInfo {
@@ -27,16 +30,16 @@
 }
 
 .productInfo h3 {
-  font-size: 1.7rem;
-  margin-top: 0.8rem;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
 }
 
 .price {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .price::after {
-  content: "€";
+  content: "₩";
   margin-left: 0.2rem;
 }
 
@@ -50,10 +53,10 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 1.6rem;
-  height: 1.6rem;
-  color: #fff;
-  background-color: #333;
+  width: 1.3rem;
+  height: 1.3rem;
+  color: #333;
+  background-color:#fff;
 
   border: none;
   border-radius: 20%;
@@ -61,24 +64,43 @@
 }
 
 .amountContainer p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .remove {
   display: inline-block;
-  padding: 0.2rem 0.8rem;
+  padding: 0.15rem 0.6rem;
   border: none;
   border-radius: 0.5rem;
   margin-bottom: 0.5rem;
 
-  background-color: #333;
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.896);
+  color: #333;
   transition: all 0.5s;
   margin-bottom: 0.5rem;
 }
 
+.colorOptions {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.colorBox {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.colorBox:hover {
+  transform: scale(1.1);
+}
+
 .total {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .total::after {
@@ -112,7 +134,7 @@
 
   .remove,
   .total {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
